@@ -1,0 +1,69 @@
+# General
+.vscode/
+.idea/
+*.iml
+*.log
+.DS_Store
+*.swp
+*.swo
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+/backend/__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# C extensions
+*.so
+
+# Virtual environments (Python)
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+env/
+
+# Pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# FastAPI specific (in /backend)
+backend/instance/
+backend/uploads/
+backend/*.sqlite3
+
+# pytest
+backend/cache/
+backend/.tox/
+backend/.pytest_cache/
+
+# Node modules (React in root)
+node_modules/
+
+# Build output (React in root)
+build/
+dist/
+
+# Temporary files (React)
+*.tmp
+*.temp
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+coverage/
+
+#env
+.env
+.env.http

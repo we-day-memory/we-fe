@@ -1,0 +1,43 @@
+{
+  "name": "wpd",
+  "version": "1.0.0",
+  "description": "A photo upload app optimized for mobile.",
+  "main": "index.js",
+  "proxy": "https://we-be-we-day-memorys-projects.vercel.app",
+  "scripts": {
+    "run-be": "backend/.venv/bin/uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000",
+    "run-ui": "react-scripts start",
+    "we-day": ". ./.env.http && npx concurrently npm:run-be npm:run-ui",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "firebase": "^10.12.5",
+    "jsonwebtoken": "^8.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "uuid": "^10.0.0"
+  },
+  "overrides": {
+    "caniuse-lite": "1.0.30001632"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2"
+  }
+}

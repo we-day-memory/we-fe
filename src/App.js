@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PhotoUploader from "./components/PhotoUploader";
 import Notification from "./components/notif";
-import "./App.css";
+import "../src/assets/global";
 
 function App() {
   const [notification, setNotification] = useState(null);

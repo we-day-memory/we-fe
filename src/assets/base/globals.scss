@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap");
 
-
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -10,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('/assets/backic.png') no-repeat center center fixed;
+  background: url("/assets/background.png") no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -35,28 +34,6 @@ body {
   font-weight: bold;
 }
 
-.photo-upload-container {
-  background: rgb(225 221 221 / 78%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 90%;
-  max-width: 500px;
-  /* backdrop-filter: blur(5px); */
-}
-
-/* .photo-upload-container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-} */
-
-.file-input-container {
-  position: relative;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
 .file-upload-label {
   display: inline-block;
   padding: 12px 20px;
@@ -73,157 +50,3 @@ body {
   transform: scale(1.05);
   color: white;
 } */
-
-input[type="file"] {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.submit-button {
-  display: inline-block;
-  padding: 12px 20px;
-  background: white;
-  color: rgba(128, 0, 0, 0.9);
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 0.9em;
-  border: none;
-  width: 13rem;
-}
-
-.submit-button:hover {
-  background: rgba(128, 0, 0, 0.9);
-  transform: scale(1.05);
-  color: white;
-}
-
-.submit-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-.previews {
-  position: relative;
-  display: inline-block; /* Ensure container size fits image */
-}
-.preview-item {
-  display: block; /* Remove extra space below image */
-  max-width: 100%; /* Ensure image scales responsively */
-  height: 65px;
-  width: 85px;
-  padding: 0.7rem;
-}
-
-.preview-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.remove-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: transparent; /* Remove background color */
-  color: black; /* Set 'X' color to black */
-  border: none; /* Remove border */
-  border-radius: 0; /* Remove border radius */
-  width: auto; /* Adjust width to fit the 'X' */
-  height: auto; /* Adjust height to fit the 'X' */
-  padding: 0; /* Remove padding */
-  cursor: pointer;
-  font-size: 20px; /* Size of the 'X' */
-  line-height: 1; /* Adjust line height for better centering */
-}
-
-/* Rest of the CSS remains unchanged */
-
-.photo-upload-container .previews {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.preview-item {
-  position: relative;
-  max-width: 100px;
-  max-height: 100px;
-}
-
-.preview-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.preview-item .remove-btn {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.preview-item:hover img {
-  transform: scale(1.1);
-}
-
-.progress-bar {
-  width: 100%;
-  background-color: #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 20px 0;
-}
-
-.progress-bar .progress {
-  height: 10px;
-  background-color: #ffcc00;
-  transition: width 0.4s ease;
-}
-
-.upload-btn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* Spinner styles */
-.spinner-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Ensure it is above all other content */
-}
-
-.spinner {
-  border: 8px solid #f3f3f3; /* Light gray */
-  border-top: 8px solid #ffcc00; /* Golden color for the top */
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}

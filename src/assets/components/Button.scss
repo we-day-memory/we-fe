@@ -1,0 +1,43 @@
+.submit-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: white;
+    color: rgba(128, 0, 0, 0.9);
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    border: none;
+    width: 13rem;
+  }
+  
+  .submit-button:hover {
+    background: rgba(128, 0, 0, 0.9);
+    transform: scale(1.05);
+    color: white;
+  }
+  
+  .submit-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  .remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent; 
+    color: black; 
+    border: none; 
+    border-radius: 0; 
+    width: auto; 
+    height: auto; 
+    padding: 0; 
+    cursor: pointer;
+    font-size: 20px; 
+    line-height: 1; 
+  }
+
+  .upload-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }

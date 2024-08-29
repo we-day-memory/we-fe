@@ -2,26 +2,27 @@ import React, { useState } from "react";
 import PhotoUploader from "./components/PhotoUploader";
 import Notification from "./components/notif";
 import "./assets/main.scss";
+import texts from './constants/texts.js';
 
 function App() {
   const [notification, setNotification] = useState(null);
 
   const handleUploadSuccess = () => {
     setNotification({
-      message: "Uspesno sacuvano!",
+      message: texts.notifications.success,
       type: "success",
     });
   };
 
   const handleUploadError = (error) => {
-    setNotification({ message: `Dogodila se greska: ${error}`, type: "error" });
+    setNotification({ message: `${texts.errors.general} ${error}`, type: "error" });
   };
 
   return (
     <div className="App">
       <div className="welcome-text">
-        <p>Hvala sto ste deo nase price!</p>
-        <h1>Ines i Nikola</h1>
+        <p>{texts.header.introMessage}</p>
+        <h1>{texts.header.brideName} i {texts.header.groomName}</h1>
       </div>
 
       <PhotoUploader

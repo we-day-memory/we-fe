@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap");
 
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -9,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("bg.jpeg") no-repeat center center fixed;
+  background: url('/assets/backic.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;

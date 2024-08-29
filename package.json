@@ -8,7 +8,7 @@
     "run-be": "backend/.venv/bin/uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000",
     "run-ui": "react-scripts start",
     "we-day": ". ./.env.http && npx concurrently npm:run-be npm:run-ui",
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

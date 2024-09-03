@@ -1,51 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap");
 
+:root {
+  --primary-color: #0A1E19;
+  --secondary-color: #2ecc71;
+  --font-size-base: 16px;
+  --font-family: 'Roboto', sans-serif;
+}
+
 body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--primary-color);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("/assets/background.png") no-repeat center center fixed;
+  background: white;
   background-size: cover;
-  color: #fff;
   text-align: center;
 }
 
-.welcome-text {
-  margin: 2em 2em 5em 1.5em;
-  padding: 20px;
-  background-color: rgba(128, 0, 0, 0.9);
-
-  border-radius: 10px;
+@media (max-width: 600px) {
+  .body {
+    padding: 1rem;
+    background-color: $primary;
+  }
 }
 
-.welcome-text h1 {
+$xs-button: 1.5rem;
+
+$primary: #0A1E19;
+
+.header h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 42px;
+  font-size: 3rem;
+  color: #0A1E19;
+  margin-bottom: 0.25rem !important;
 }
 
-.welcome-text p {
+.date p {
   font-size: 20px;
   margin: 10px 0 0;
   font-weight: bold;
+  color: rgba($primary,0.6);
 }
 
 .file-upload-label {
   display: inline-block;
   padding: 12px 20px;
-  background: white;
-  color: rgba(128, 0, 0, 0.9);
+  background-color: $primary;
+  color: white;
   border-radius: 25px;
   cursor: pointer;
   font-size: 0.9em;
   width: 11rem;
 }
 
-$xs-button: 1.5rem;
+
 
 /* .file-upload-label.input:hover {
   background: rgba(128, 0, 0, 0.9);

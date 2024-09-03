@@ -1,8 +1,8 @@
 .submit-button {
     display: inline-block;
     padding: 12px 20px;
-    background: white;
-    color: rgba(128, 0, 0, 0.9);
+    background-color: var(--primary-color);
+    color: white;
     border-radius: 25px;
     cursor: pointer;
     font-size: 0.9em;
@@ -26,23 +26,15 @@
     top: 0;
     right: 0;
     background-color: transparent; 
-    color: white; 
+    color: black; 
     border: none; 
-    border-radius: 100%; 
-    width: $xs-button; 
-    height: $xs-button; 
+    border-radius: 0; 
+    width: auto; 
+    height: auto; 
     padding: 0; 
     cursor: pointer;
-    font-size: 24px; 
+    font-size: 20px; 
     line-height: 1; 
-
-    &:hover {
-      background-color: rgba($color: red, $alpha: 0.5);
-    }
-
-    &:active {
-      background-color: red;
-    }
   }
 
   .upload-btn:disabled {

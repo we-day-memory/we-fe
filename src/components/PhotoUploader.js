@@ -89,16 +89,6 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
                 >
                   &times;
                 </button>
-                {/* {uploadProgress[selectedFiles[index]?.name] && (
-                  <div className="progress-bar">
-                    <div
-                      className="progress"
-                      style={{
-                        width: `${uploadProgress[selectedFiles[index].name]}%`,
-                      }}
-                    ></div>
-                  </div>
-                )} */}
               </div>
             ))}
           </div>

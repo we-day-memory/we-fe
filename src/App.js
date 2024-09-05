@@ -16,7 +16,8 @@ function App() {
 
   const handleUploadError = () => {
     setNotification({
-      message: `${texts.errors.general} ${error}`,
+      message: texts.errors.general
+      ,
       type: "error",
     });
   };

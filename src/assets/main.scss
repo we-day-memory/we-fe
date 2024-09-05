@@ -5,3 +5,27 @@
 @import '/src/assets/components/Spinner.scss';
 @import '/src/assets/components/ProgressBar.scss';
 @import '/src/assets/components/Image.scss';
+
+:root {
+    --primary-color: #0A1E19;
+    --secondary-color: #2ecc71;
+    --font-size-base: 16px;
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+    background-size: cover;
+    text-align: center;
+  }

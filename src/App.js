@@ -14,31 +14,34 @@ function App() {
     });
   };
 
-  const handleUploadError = (error) => {
+  const handleUploadError = () => {
     setNotification({
       message: `${texts.errors.general} ${error}`,
       type: "error",
     });
   };
 
+  const { brideName, groomName, date } = texts.header;
+
   return (
-    <div className="App">
+    <div className="app">
       <div className="header-image-border">
-        <div className="header-image"></div>
+        <img src="/src/assets/headerImage.png" alt="Wedding Header" className="header-image" />
       </div>
 
       <div className="header">
-        <h1>{texts.header.brideName} i {texts.header.groomName}</h1>
+        <h1>{`${brideName} i ${groomName}`}</h1>
       </div>
 
       <div className="date">
-      <p>{texts.header.date}</p>
+        <p>{date}</p>
       </div>
 
       <PhotoUploader
         onUploadSuccess={handleUploadSuccess}
         onUploadError={handleUploadError}
       />
+
       {notification && (
         <Notification
           message={notification.message}
@@ -48,6 +51,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;

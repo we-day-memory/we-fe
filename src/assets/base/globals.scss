@@ -4,7 +4,7 @@
 
 $xs-button: 1.5rem;
 
-$primary: #0A1E19;
+$primary: #3d3b3a;
 
 .header h1 {
   font-family: "Dancing script", cursive;
@@ -30,6 +30,12 @@ $primary: #0A1E19;
   cursor: pointer;
   font-size: 0.9em;
   width: 11rem;
+
+  &:hover {
+    background: rgba(#0A0A0A, 0.9);
+    transform: scale(1.02);
+    color: white;
+  }
 }
 
 .header-images {
@@ -43,4 +49,16 @@ $primary: #0A1E19;
   border-top-right-radius: 50% 105px;
   border-bottom-left-radius: 8%;
   border-bottom-right-radius: 8%;
+}
+
+.heart-container {
+  background: url("/assets/heart.png") no-repeat center center;
+  height: 44px;
+  width: 44px;
+  margin-right: 4px;
+  }
+
+
+.groom-name {
+  margin-top: 0 !important;
 }

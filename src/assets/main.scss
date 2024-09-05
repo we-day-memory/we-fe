@@ -1,7 +1,45 @@
-@import 'base/globals.scss';
+@import '/src/assets/base/globals.scss';
 @import '/src/assets/components/Container.scss';
 @import '/src/assets/components/Input.scss';
 @import '/src/assets/components/Button.scss';
 @import '/src/assets/components/Spinner.scss';
 @import '/src/assets/components/ProgressBar.scss';
 @import '/src/assets/components/Image.scss';
+
+// @font-face {
+//   font-family: 'MyCustomFont';
+//   src: url("../public/Eyesome.otf") format('otf');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+:root {
+    --primary-color: #3d3b3a;
+    --secondary-color: #2ecc71;
+    --font-size-base: 16px;
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--primary-color);
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+    background-size: cover;
+    text-align: center;
+  }
+
+.app {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,54 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap");
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url("/assets/background.png") no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-}
-
-.welcome-text {
-  margin: 2em 2em 5em 1.5em;
-  padding: 20px;
-  background-color: rgba(128, 0, 0, 0.9);
-
-  border-radius: 10px;
-}
-
-.welcome-text h1 {
-  font-family: "Great Vibes", cursive;
-  font-size: 42px;
-}
-
-.welcome-text p {
-  font-size: 20px;
-  margin: 10px 0 0;
-  font-weight: bold;
-}
-
-.file-upload-label {
-  display: inline-block;
-  padding: 12px 20px;
-  background: white;
-  color: rgba(128, 0, 0, 0.9);
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 0.9em;
-  width: 11rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 $xs-button: 1.5rem;
 
-/* .file-upload-label.input:hover {
-  background: rgba(128, 0, 0, 0.9);
-  transform: scale(1.05);
+$primary: #3d3b3a;
+
+.header h1 {
+  font-family: "Dancing script", cursive;
+  font-size: 3rem;
+  color: #3d3b3a;
+  margin-bottom: 0.25rem !important;
+}
+
+.date p {
+  font-size: 20px;
+  margin: 10px 0 0;
+  font-weight: bold;
+  color: rgba(#3d3b3a,0.6);
+}
+
+.choose-button {
+  display: inline-block;
+  font-family: "Noto Serif", serif;
+  padding: 12px 20px;
+  background-color: var(--primary-color);
   color: white;
-} */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 11rem;
+
+  &:hover {
+    background: rgba(#0A0A0A, 0.9);
+    transform: scale(1.02);
+    color: white;
+  }
+}
+
+.header-images {
+  background: url("/assets/golubcici.png") no-repeat center center;
+  background-size: contain;
+  box-sizing: border-box;
+  height: 132px;
+  width: 132px;
+  border: 4px solid white;
+  border-top-left-radius: 50% 105px; 
+  border-top-right-radius: 50% 105px;
+  border-bottom-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+}
+
+.heart-container {
+  background: url("/assets/heart.png") no-repeat center center;
+  height: 44px;
+  width: 44px;
+  margin-right: 4px;
+  }
+
+
+.groom-name {
+  margin-top: 0 !important;
+}

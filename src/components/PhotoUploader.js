@@ -65,7 +65,7 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
       )}
       <form onSubmit={handleSubmit}>
         <div className="file-input-container">
-          <label htmlFor="file-upload" className="file-upload-label">
+          <label htmlFor="file-upload" className="choose-button">
             Izaberi uspomenu
           </label>
           <input
@@ -89,16 +89,6 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
                 >
                   &times;
                 </button>
-                {/* {uploadProgress[selectedFiles[index]?.name] && (
-                  <div className="progress-bar">
-                    <div
-                      className="progress"
-                      style={{
-                        width: `${uploadProgress[selectedFiles[index].name]}%`,
-                      }}
-                    ></div>
-                  </div>
-                )} */}
               </div>
             ))}
           </div>

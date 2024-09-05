@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PhotoUploader from "./components/PhotoUploader";
 import Notification from "./components/notif";
 import "./assets/main.scss";
-import texts from './constants/texts.js';
+import texts from "./constants/texts.js";
 
 function App() {
   const [notification, setNotification] = useState(null);
@@ -14,21 +14,35 @@ function App() {
     });
   };
 
-  const handleUploadError = (error) => {
-    setNotification({ message: `${texts.errors.general} ${error}`, type: "error" });
+  const handleUploadError = () => {
+    setNotification({
+      message: texts.errors.general
+      ,
+      type: "error",
+    });
   };
 
+  const { brideName, groomName, date } = texts.header;
+
   return (
-    <div className="App">
-      <div className="welcome-text">
-        <p>{texts.header.introMessage}</p>
-        <h1>{texts.header.brideName} i {texts.header.groomName}</h1>
+    <div className="app">
+      <div className="header-image-border">
+        <div className="header-images"></div>
+      </div>
+
+      <div className="header">
+        <h1>{`${brideName}`}</h1>
+        <div className="icon-and-text-container">
+          <div className="heart-container"></div>
+          <h1 className="groom-name">{`${groomName}`}</h1>
+        </div>
       </div>
 
       <PhotoUploader
         onUploadSuccess={handleUploadSuccess}
         onUploadError={handleUploadError}
       />
+
       {notification && (
         <Notification
           message={notification.message}
@@ -38,6 +52,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
 export default App;

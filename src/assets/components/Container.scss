@@ -1,21 +1,18 @@
 .photo-upload-container {
-    background: rgb(225 221 221 / 78%);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5%;
     text-align: center;
     width: 90%;
     max-width: 500px;
-    /* backdrop-filter: blur(5px); */
   }
-
-  /* .photo-upload-container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-} */
 
 .file-input-container {
     position: relative;
     margin-bottom: 10px;
     margin-top: 10px;
+  }
+
+  .icon-and-text-container {
+    display: flex;
+    justify-content: center;
   }

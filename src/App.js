@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="app">
       <div className="header-image-border">
-        <img src="/src/assets/headerImage.png" alt="Wedding Header" className="header-image" />
+        <div className="header-images"></div>
       </div>
 
       <div className="header">

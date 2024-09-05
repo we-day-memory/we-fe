@@ -57,25 +57,17 @@
   .header-image-border {
     box-sizing: border-box;
     border: 4px solid $primary;
-    align-items: center;
     border-top-left-radius: 50% 100px; 
     border-top-right-radius: 50% 100px;
     border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%;
-    text-align: center;
-    height: 144px;
-    width: 132px;
+    height: 140px;
+    width: 140px;
     margin-top: 2rem;
+    align-self: center;
   }
   
   .header-image {
-    box-sizing: border-box;
-    height: 130px;
-    width: 120px;
-    border: 4px solid white;
-    border-top-left-radius: 50% 100px; 
-    border-top-right-radius: 50% 100px;
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
+   
 
   }

@@ -7,9 +7,15 @@
   }
 
 .file-input-container {
+  background-color: white !important;
+  display: inline-block;
     position: relative;
     margin-bottom: 10px;
     margin-top: 10px;
+
+    &:hover {
+      transform: scale(1.01);
+    }
   }
 
   .icon-and-text-container {

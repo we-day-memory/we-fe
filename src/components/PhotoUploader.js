@@ -65,7 +65,7 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
       )}
       <form onSubmit={handleSubmit}>
         <div className="file-input-container">
-          <label htmlFor="file-upload" className="file-upload-label">
+          <label htmlFor="file-upload" className="choose-button">
             Izaberi uspomenu
           </label>
           <input

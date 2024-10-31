@@ -1,8 +1,8 @@
 const texts = {
     header: {
         introMessage: "Hvala što se dio naše priče!",
-        groomName: "Dejan",
-        brideName: "Dejana",
+        groomName: "NIKOLA",
+        brideName: "INES &",
         date: "08.09.2024."
     },
     buttons: {

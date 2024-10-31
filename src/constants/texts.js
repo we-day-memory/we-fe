@@ -3,7 +3,7 @@ const texts = {
         introMessage: "Hvala što se dio naše priče!",
         groomName: "NIKOLA",
         brideName: "INES &",
-        date: "08.09.2024."
+        date: "02.11.2024."
     },
     buttons: {
         submit: "Pošalji",

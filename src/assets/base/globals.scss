@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300;400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wdth,wght@0,79.7,100..900;1,79.7,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
 $xs-button: 1.5rem;
 
-$primary: #3d3b3a;
+$primary: #6F4050;
 
 .header h1 {
   margin-top: 0.5rem;
-  font-family: "Dancing script", cursive;
+  font-family: "Roboto Slab", serif;
   font-size: 3.25rem;
-  color: #3d3b3a;
+  line-height: 3.25rem;
+  font-weight: 400;
+  color: #6F4050;
   margin-bottom: 0.25rem !important;
 }
 
@@ -18,12 +19,13 @@ $primary: #3d3b3a;
   font-size: 20px;
   margin: 10px 0 0;
   font-weight: bold;
-  color: rgba(#3d3b3a,0.6);
+  color: rgba(#6F4050,0.6);
 }
 
 .choose-button {
+  background-color: #4E3139 !important;
   display: inline-block;
-  font-family: "Noto Serif", serif;
+  font-family: "Roboto Slab", serif;
   padding: 12px 20px;
   background-color: var(--primary-color);
   color: white;
@@ -34,7 +36,7 @@ $primary: #3d3b3a;
 }
 
 .header-images {
-  background: url("/assets/golubcici.png") no-repeat center center;
+  background: url("/assets/kumovi.png") no-repeat center center;
   background-size: contain;
   box-sizing: border-box;
   height: 144px;

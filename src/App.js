@@ -33,7 +33,6 @@ function App() {
       <div className="header">
         <h1>{`${brideName}`}</h1>
         <div className="icon-and-text-container">
-          <div className="heart-container"></div>
           <h1 className="groom-name">{`${groomName}`}</h1>
         </div>
       </div>

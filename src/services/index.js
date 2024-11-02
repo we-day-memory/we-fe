@@ -11,7 +11,7 @@ const http = axios.create({ baseURL: GATEWAY_URL });
 const secretKey = process.env.REACT_APP_SECRET_KEY
 
 const payload = {
-  user_id: "02.11.2024",
+  user_id: "03.11.2024",
   username: "wedding_guest",
   email: "test@gmail.com",
   role: "guest",

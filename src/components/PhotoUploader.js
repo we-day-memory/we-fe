@@ -14,6 +14,41 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
     setFilePreviews(filePreviews);
   };
 
+  const resizeImage = (file, maxWidth = 800, maxHeight = 800) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      let width = img.width;
+      let height = img.height;
+
+      // Calculate new dimensions while preserving aspect ratio
+      if (width > height) {
+        if (width > maxWidth) {
+          height = Math.round((height * maxWidth) / width);
+          width = maxWidth;
+        }
+      } else {
+        if (height > maxHeight) {
+          width = Math.round((width * maxHeight) / height);
+          height = maxHeight;
+        }
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, width, height);
+
+      canvas.toBlob((blob) => {
+        resolve(blob); // Reduced-size file
+      }, file.type, 0.8); // 0.8 is the quality setting (80% quality)
+    };
+    img.onerror = (error) => reject(error);
+  });
+};
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -24,7 +59,8 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
         const chunk = selectedFiles.slice(i, i + chunkSize);
         const formData = new FormData();
         chunk.forEach((file) => {
-          formData.append("files", file);
+          const resizedFile = await resizeImage(file);
+          formData.append("files", resizedFile);
         });
         await http.post("/upload", formData, {
           headers: {

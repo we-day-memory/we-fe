@@ -6,7 +6,11 @@ export const GATEWAY_URL =
     ? "https://we-be-we-day-memorys-projects.vercel.app"
     : "http://localhost:8000";
 
-const http = axios.create({ baseURL: GATEWAY_URL });
+const http = axios.create({ 
+  baseURL: GATEWAY_URL,
+  maxContentLength: Infinity,
+  maxBodyLength: Infinity,
+});
 
 const secretKey = process.env.REACT_APP_SECRET_KEY
 

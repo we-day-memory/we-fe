@@ -58,10 +58,10 @@ function PhotoUploader({ onUploadSuccess, onUploadError }) {
       try {
         const chunk = selectedFiles.slice(i, i + chunkSize);
         const formData = new FormData();
-        chunk.forEach((file) => {
-          const resizedFile = await resizeImage(file);
-          formData.append("files", resizedFile);
-        });
+        for (const file of chunk) {
+            const resizedFile = await resizeImage(file);
+            formData.append("files", resizedFile);
+        }
         await http.post("/upload", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
